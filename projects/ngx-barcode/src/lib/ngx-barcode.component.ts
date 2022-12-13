@@ -1,6 +1,5 @@
-import { ChangeDetectionStrategy } from '@angular/compiler';
 import { Component, ElementRef, OnInit, Input, OnChanges, Renderer2 } from '@angular/core';
-import * as JsBarcode from 'jsbarcode';
+import jsbarcode from 'jsbarcode';
 
 @Component({
   selector: 'ngx-barcode',
@@ -55,7 +54,7 @@ export class NgxBarcodeComponent implements OnChanges, OnInit {
       this.render.removeChild(this._element.nativeElement, this._element.nativeElement.firstChild, true);
     }
     this.render.appendChild(this._element.nativeElement, barcodeElm);
-    JsBarcode(barcodeElm, this.text, this.options);
+    jsbarcode(barcodeElm, this.text, this.options);
 
   }
 
