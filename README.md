@@ -14,7 +14,7 @@ $ npm install @thachnuida/ngx-barcode --save
 
 # Usage
 
-Import the `NgxJsBarcodeModule` into your desired module:
+Import the `NgxBarcodeModule` into your desired module:
 
 ```
 import { NgModule } from '@angular/core';
