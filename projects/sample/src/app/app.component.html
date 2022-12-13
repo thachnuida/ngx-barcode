@@ -1,0 +1,106 @@
+
+<div class="main">
+    <h1>
+        <a href="https://github.com/thachnuida/ngx-barcode">ngx-barcode</a>
+        <small>Angular barcode component based on <a href="https://github.com/lindell/JsBarcode">JsBarcode</a></small>
+    </h1>
+
+
+    <div class="container">
+        <div class="barcode-container">
+            <ngx-barcode elementType="svg" [text]="text" [options]="options"></ngx-barcode>
+        </div>
+        <form (change)="updateOptions()">
+            <div class="row">
+                <div class="col-sm-12 col-md-8">
+                    <input type="text" placeholder="Barcode" name="mainText" [(ngModel)]="text" class="width-100"/>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <select [(ngModel)]="options.format" name="format" class="width-100">
+                        <option value="CODE128">CODE128 auto</option>
+                        <option value="CODE128A">CODE128 A</option>
+                        <option value="CODE128B">CODE128 B</option>
+                        <option value="CODE128C">CODE128 C</option>
+                        <option value="EAN13">EAN13</option>
+                        <option value="EAN8">EAN8</option>
+                        <option value="UPC">UPC</option>
+                        <option value="CODE39">CODE39</option>
+                        <option value="ITF14">ITF14</option>
+                        <option value="ITF">ITF</option>
+                        <option value="MSI">MSI</option>
+                        <option value="MSI10">MSI10</option>
+                        <option value="MSI11">MSI11</option>
+                        <option value="MSI1010">MSI1010</option>
+                        <option value="MSI1110">MSI1110</option>
+                        <option value="pharmacode">Pharmacode</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <label for="width">Bar Width</label>
+                    <input type="number" placeholder="Bar Width" name="width" [(ngModel)]="options.width" class="width-100"/>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="height">Height</label>
+                    <input type="number" placeholder="Height" name="height" [(ngModel)]="options.height" class="width-100"/>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="margin">Margin</label>
+                    <input type="number" placeholder="Margin" name="margin" [(ngModel)]="options.margin" class="width-100"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <label for="background">Background</label>
+                    <input type="text" placeholder="Background" name="background" [(ngModel)]="options.background" class="width-100"/>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="lineColor">Line Color</label>
+                    <input type="text" placeholder="Line Color" name="lineColor" [(ngModel)]="options.lineColor" class="width-100"/>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="displayValue">Show Text</label>
+                    <select [(ngModel)]="options.displayValue" name="displayValue" class="width-100">
+                        <option [ngValue]="true">Show</option>
+                        <option [ngValue]="false">Hide</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <label for="font">Font</label>
+                    <select [(ngModel)]="options.font" name="font" class="width-100">
+                        <option value="monospace" style="font-family: monospace" selected="selected">Monospace</option>
+                        <option value="sans-serif" style="font-family: sans-serif">Sans-serif</option>
+                        <option value="serif" style="font-family: serif">Serif</option>
+                        <option value="fantasy" style="font-family: fantasy">Fantasy</option>
+                        <option value="cursive" style="font-family: cursive">Cursive</option>
+                    </select>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="fontSize">Font Size</label>
+                    <input type="number" placeholder="Font Size" name="fontSize" [(ngModel)]="options.fontSize" class="width-100"/>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="textAlign">Text Align</label>
+                    <select [(ngModel)]="options.textAlign" name="textAlign" class="width-100">
+                        <option value="left">Left</option>
+                        <option value="center">Center</option>
+                        <option value="right">Right</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <label for="textMargin">Text Margin</label>
+                    <input type="number" placeholder="Text Margin" name="textMargin" [(ngModel)]="options.textMargin" class="width-100"/>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+</div>
+
+

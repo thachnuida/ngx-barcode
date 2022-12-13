@@ -1,0 +1,23 @@
+.barcode-container {
+    text-align: center;
+}
+
+.main {
+    margin: 20px auto;
+    padding: 20px 40px;
+    max-width: 720px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+@media (max-width: 800px) {
+    .main {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.width-100 {
+    width: 100%;
+}
