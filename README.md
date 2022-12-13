@@ -42,7 +42,7 @@ export class AppModule { }
 Add `ngx-barcode` to your component:
 
 ```
-<ngx-barcode text="Hello"></ngx-barcode>
+<ngx-barcode text="Hello" [options]="options"></ngx-barcode>
 ```
 
 # Barcode Options
